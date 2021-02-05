@@ -20,8 +20,10 @@ services:
       - db
 
   db:
-    image: postgres:11-alipne
+    image: postgres
     environment:
       - POSTGRES_DB=app
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=secret
+    ports:
+      - '5432:5432'
